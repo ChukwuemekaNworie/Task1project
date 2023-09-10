@@ -4,7 +4,7 @@ const dateClock = setInterval(function dateTime() {
     let day = weekdays[today.getDay()];
     let month = monthNames[today.getMonth()];
   
-    dateContainer.innerHTML = [`<p>Current Day Of TheWeek:</p><p>${day}</p> <p></p> <p></p><p>${date}</p> <p>${month}</p>`];
+
   }, 1000);
   
           setInterval(()=>{
@@ -36,58 +36,11 @@ const dateClock = setInterval(function dateTime() {
           })
   
   
+const dayOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday",];
 
-let dateContainer = document.querySelector(".date");
-const weekdays = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-const monthNames = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+ const today = new Date();
+ const currentDay = dayOfWeek[today.getUTCDay()];
+ document.querySelector('[data-testid="currentDayOfTheWeek"').textContent = currentDay;
 
 
-
-    // // JavaScript to display the current day of the week
-    // const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    // const today = new Date();
-    // const currentDay = daysOfWeek[today.getUTCDay()];
-    // document.querySelector("currentDayOfTheWeek").textContent = currentDay;
-    // document.querySelector("currentUTCTime"x).textContent = currentUTCTime;
-
-    // // JavaScript to display the current UTC time in milliseconds
-    // const currentUTCTime = Date.now();
-    // document.querySelector('[data-testid="currentUTCTime"]').textContent = currentUTCTime;
-
-
-
-
-
-
-
-
-
-
-
-// document.getElementById('day').innerHTML = day;
-
-
-// const d = new Date();
-// let time = d.getTime();
 
